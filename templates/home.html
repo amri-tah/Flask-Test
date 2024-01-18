@@ -24,7 +24,7 @@
             color: black;
         }
 
-        button{
+        button, .apply a{
             font-family: "Poppins";
             padding: 10px 20px;
             background-color: #678fda;
@@ -46,6 +46,7 @@
         .aboutus, .job-openings{
             padding: 20px 10%;
         }
+
 
         .card{
             display: flex; 
@@ -102,7 +103,7 @@
                 </div>
 
                 <div class="apply">
-                    <button>Apply Now!</button>
+                    <a href="mailto:amrithanandini2003@gmail.com?subject=Job%20Application%20for%20{{ job['title'] }}&body=My%20name%20%3A%20%3C%3CEnter%20your%20name%3E%3E%0D%0A%0D%0AMy%20resume%20link%3A%20%3C%3CEnter%20resume%3E%3E%0D%0A%0D%0AMy%20Linkedin%3A%20%3C%3CLinkedin%3E%3E%0D%0A">Apply Now!</a>
                 </div>
             </div>
         {% endfor %}
