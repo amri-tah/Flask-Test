@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>CareerVista</title>
+    <style>
+        body{
+            font-family: "Poppins";
+            margin: 0;
+        }
+        .navbar{
+            display: flex; 
+            align-items: center; 
+            justify-content: space-between; 
+            padding: 5px 10px;
+        }
+
+        a{
+            text-decoration: none;
+            color: black;
+        }
+
+        button{
+            font-family: "Poppins";
+            padding: 10px 20px;
+            background-color: #678fda;
+            border-radius: 20px;
+            border: none;
+            color: white;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        .navlinks{
+            display: flex; 
+            align-items: center; 
+            justify-content: space-between; 
+            gap: 20px;
+            font-size: 18px;
+        }
+        
+        .aboutus, .job-openings{
+            padding: 20px 10%;
+        }
+
+        .card{
+            display: flex; 
+            align-items: center;
+            justify-content: space-between;
+            border: 1px solid black;
+            border-radius: 10px;
+            padding: 10px 15px;
+            margin: 20px auto;
+            line-height: 100%;
+        }
+
+        .footer{
+            height: 200px;
+            background-color: black;
+            margin-top: 30px;
+        }
+
+        img{
+            width: 100%;
+            height: 460px;
+            object-fit: cover;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo"><h1>CareerVista</h1></div>
+        <div class="navlinks">
+            <a href="#">Home</a>
+            <a href="#aboutus">About Us</a>
+            <a href="#">Careers</a>
+        </div>
+        <div class="contact">
+            <button>Contact Us!</button>
+        </div>
+
+    </div>
+    <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/2000a352812969.59eedeac2642a.gif" alt="">
+    <div class="aboutus" id="aboutus">
+        <h3>About Us</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+    </div>
+
+    <div class="job-openings">
+        <h3>Job Openings</h3>
+        {% for job in jobs %}
+            <div class="card">
+                <div class="card-details">
+                    <h4>{{ job["title"] }}</h4>
+                    <p>{{ job["location"] }}</p>
+                    <p>{{ job["salary"] }}</p>
+                </div>
+
+                <div class="apply">
+                    <button>Apply Now!</button>
+                </div>
+            </div>
+        {% endfor %}
+        <div class="contact" style="display:flex; justify-content: center;">
+            <button>Contact Us!</button>
+        </div>
+    </div>
+    
+
+    <div class="footer">
+        Footer
+    </div>
+</body>
+</html>
